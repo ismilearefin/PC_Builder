@@ -2,7 +2,8 @@ import { Inter } from 'next/font/google'
 const _ = require('lodash');
 import RootLayout from '@/components/Layouts/RootLayout'
 import FeaturedProduct from '@/components/FeaturedProduct/FeaturedProduct';
-import { BsCloudFog } from 'react-icons/bs';
+import FeaturedCategory from '@/components/FeaturedCategory/FeaturedCategory';
+
 
 
 
@@ -16,7 +17,8 @@ export default function Home({randomProducts}) {
     <main className=''>
       
       <FeaturedProduct randomProducts={randomProducts}></FeaturedProduct>
-      
+      <FeaturedCategory></FeaturedCategory>
+    
     </main>
   )
 }
@@ -24,9 +26,8 @@ export default function Home({randomProducts}) {
 export const getStaticProps = async () => {
   const res = await fetch('http://localhost:5000/products');
   const data = await res.json();
-  console.log(data)
-  const randomProducts = _.sampleSize(data, 6);
-  // console.log(data)
+  const randomProducts = _.sampleSize(data, 6); //pick 6 random products from data array
+
   return {
       props:{
          randomProducts
