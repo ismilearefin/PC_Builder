@@ -35,8 +35,8 @@ export default function FeaturedCategory() {
 
   return (
    <div>
-    <h1 className='text-center text-4xl mb-2 font-semibold'>Featured <span className='text-[#53f4fa]'>Category</span></h1>
-     <div className='grid grid-cols-6 gap-6 m-6 md:m-12 '>
+    <h1 className='text-center text-4xl my-8 md:mb-2 font-semibold'>Featured <span className='text-[#53f4fa]'>Category</span></h1>
+     <div className='grid md:grid-cols-6 gap-2 md:gap-6 m-6 md:m-12 '>
       {category.map((item) => {
         // const IconComponent = item.icon;
         return (

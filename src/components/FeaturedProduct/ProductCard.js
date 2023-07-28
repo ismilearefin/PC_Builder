@@ -6,11 +6,11 @@ export default function ProductCard({ product }) {
   const { _id,image, productName, category, price, status, averageRating } =
     product;
   return (
-    <div className="shadow-xl p-2">
+    <div className="shadow-md hover:shadow-2xl p-2 transition delay-100 duration-300">
       <Link href={`/products/${_id}`}>
       <div>
         <Image
-          className=""
+          className="w-full"
           src={image}
           alt="product Image"
           width={250}

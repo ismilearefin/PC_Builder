@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({randomProducts}) {
   
-  console.log(randomProducts)
+  // console.log(randomProducts)
   return (
     <main className=''>
       
