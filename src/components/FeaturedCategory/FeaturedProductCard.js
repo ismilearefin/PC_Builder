@@ -3,17 +3,18 @@ import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { addToPcBuilder } from "@/redux/features/pcBuilder/pcBuilderSlice";
 import { useRouter } from "next/router";
+import { usePostProductInPcBuilderMutation } from "@/redux/api/apiSlice";
 
 
 export default function FeaturedProductCard({ product }) {
     const router = useRouter()
-    
+    const [postProduct, options]=usePostProductInPcBuilderMutation();
   
-  const dispatch = useDispatch()
+
   
   
   const handleProduct =(product)=>{
-    dispatch(addToPcBuilder(product))
+    postProduct(product)
     alert('Successfully added product')
     router.push('/pcBuilder')
   }

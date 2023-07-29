@@ -1,18 +1,20 @@
 import RootLayout from "@/components/Layouts/RootLayout";
-import { addToPcBuilder } from "@/redux/features/pcBuilder/pcBuilderSlice";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useDispatch, useSelector } from "react-redux";
 
 export default function DetailsPage({ product }) {
   const router = useRouter()
+  const [postProduct, {isLoading}]=usePostProductInPcBuilderMutation();
   
   
-  const dispatch = useDispatch()
-  
+  if(isLoading) {
+    <p>Loading...</p>
+  }
+ 
   
   const handleProduct =(product)=>{
-    dispatch(addToPcBuilder(product))
+    postProduct(product)
+    
     alert('Successfully added product')
     router.push('/pcBuilder')
   }
