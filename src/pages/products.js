@@ -1,3 +1,4 @@
+import FeaturedProductCard from "@/components/FeaturedCategory/FeaturedProductCard";
 import ProductCard from "@/components/FeaturedProduct/ProductCard";
 import RootLayout from "@/components/Layouts/RootLayout";
 import React from "react";
@@ -8,7 +9,7 @@ export default function CategoryWiseProduct({ category, data }) {
       <h1 className="text-center text-3xl font-semibold capitalize mb-12">Our all <span>{category}s</span></h1>
       <div className="grid grid-cols-3 gap-8 mx-12">
         {data.map((product) => (
-          <ProductCard product={product} key={product._id}></ProductCard>
+          <FeaturedProductCard product={product} key={product._id}></FeaturedProductCard>
         ))}
       </div>
     </div>

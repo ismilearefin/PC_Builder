@@ -46,7 +46,10 @@ export default function PCBuilder() {
             </p>
         </div>
         <div className="min-h-screen">
-            <PcBuilder></PcBuilder>
+            {
+                category.map(product =><PcBuilder key={product.name} product={product}></PcBuilder>)
+            }
+            
         </div>
     </div>
   )

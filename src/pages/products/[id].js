@@ -36,6 +36,9 @@ export default function DetailsPage({ product }) {
             <li>Avg Rating: {averageRating}</li>
             <li>Your Rating: {individualRating}</li>
         </div>
+        <div className="w-full grid justify-end">
+        <button className="border-4 px-6 font-semibold text-lg text-[#2ea4a8]">Select</button>
+        </div>
     </div>
   </div>;
 }
