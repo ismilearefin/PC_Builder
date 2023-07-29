@@ -1,5 +1,4 @@
 import FeaturedProductCard from "@/components/FeaturedCategory/FeaturedProductCard";
-import ProductCard from "@/components/FeaturedProduct/ProductCard";
 import RootLayout from "@/components/Layouts/RootLayout";
 import React from "react";
 
