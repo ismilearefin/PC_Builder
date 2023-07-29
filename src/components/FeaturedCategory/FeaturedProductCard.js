@@ -1,7 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { addToPcBuilder } from "@/redux/features/pcBuilder/pcBuilderSlice";
+
 
 export default function FeaturedProductCard({ product }) {
+    const selectedProduct = useSelector(state => state.product.selectedProduct)
+  
+  const dispatch = useDispatch()
+  
+  
+  const handleProduct =(product)=>{
+    dispatch(addToPcBuilder(product))
+    
+  }
  
   const { _id,image, productName, category, price, status, averageRating } =
     product;
@@ -29,7 +41,7 @@ export default function FeaturedProductCard({ product }) {
       <Link className="border hover:border-[#32f5fc] w-1/2 text-center" href={`/products/${_id}`}>
         Details
       </Link>
-      <button className="w-1/2 border hover:border-[#32f5fc]">Select</button>
+      <button className="w-1/2 border hover:border-[#32f5fc]" onClick={()=>handleProduct(product)}>Select</button>
       </div>
     </div>
   );

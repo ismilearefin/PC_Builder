@@ -1,7 +1,20 @@
 import RootLayout from "@/components/Layouts/RootLayout";
+import { addToPcBuilder } from "@/redux/features/pcBuilder/pcBuilderSlice";
 import Image from "next/image";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function DetailsPage({ product }) {
+
+  const selectedProduct = useSelector(state => state.product.selectedProduct)
+  
+  const dispatch = useDispatch()
+  
+  
+  const handleProduct =(product)=>{
+    dispatch(addToPcBuilder(product))
+    
+  }
+
   const {
     averageRating,
     brand,
@@ -37,7 +50,7 @@ export default function DetailsPage({ product }) {
             <li>Your Rating: {individualRating}</li>
         </div>
         <div className="w-full grid justify-end">
-        <button className="border-4 px-6 font-semibold text-lg text-[#2ea4a8]">Select</button>
+        <button className="border-4 px-6 font-semibold text-lg text-[#2ea4a8]" onClick={()=>handleProduct(product)}>Select</button>
         </div>
     </div>
   </div>;

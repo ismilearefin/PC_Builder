@@ -5,8 +5,11 @@ import PcBuilder from "@/components/pcBuilder/PcBuilder";
 import { BsCpu,BsMotherboard,BsFillDiagram3Fill } from 'react-icons/bs';
 import { GiPowerGenerator } from 'react-icons/gi';
 import { MdStorage,MdMonitor } from 'react-icons/md';
+import { useSelector } from "react-redux";
 
 export default function PCBuilder() {
+    const selectedProduct = useSelector(state => state.product.selectedProduct)
+
 
     const category = [
         {
@@ -47,7 +50,7 @@ export default function PCBuilder() {
         </div>
         <div className="min-h-screen">
             {
-                category.map(product =><PcBuilder key={product.name} product={product}></PcBuilder>)
+                category.map(product =><PcBuilder key={product.name} selectedProduct={selectedProduct} product={product}></PcBuilder>)
             }
             
         </div>
