@@ -10,7 +10,7 @@ export default function Navbar() {
         <Link href={'/'}><Image src={logo} alt='logo' width={120} height={120}></Image></Link>
         </div>
         <nav className='text-gray-300 flex justify-center gap-x-6 text-md'>
-            <Link href={'/'} className='hover:text-[#5CE1E6]'>Pc Builder</Link>
+            <Link href={'/pcBuilder'} className='hover:text-[#5CE1E6]'>Pc Builder</Link>
             <p>|</p>
             <DropdownButton></DropdownButton>
             <p>|</p>

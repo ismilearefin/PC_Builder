@@ -41,7 +41,6 @@ export default function FeaturedCategory() {
         // const IconComponent = item.icon;
         return (
           <Link href={`/products?category=${item.name}`} className='border rounded-md shadow-md grid justify-center p-10 hover:text-[#35f7fd] transition delay-150 duration-300' key={item.name}>
-            {/* <IconComponent  /> */}
             <p className=' text-7xl flex justify-center pb-2 '>{item.icon}</p>
             <p className='text-xl text-center font-semibold'>{item.name}</p>
           </Link>
