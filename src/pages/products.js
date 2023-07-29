@@ -5,10 +5,15 @@ import React from "react";
 export default function CategoryWiseProduct({ category, data }) {
   return (
     <div className="my-12">
-      <h1 className="text-center text-3xl font-semibold capitalize mb-12">Our all <span>{category}s</span></h1>
+      <h1 className="text-center text-3xl font-semibold capitalize mb-12">
+        Our all <span>{category}s</span>
+      </h1>
       <div className="grid md:grid-cols-3 gap-8 mx-12">
         {data.map((product) => (
-          <FeaturedProductCard product={product} key={product._id}></FeaturedProductCard>
+          <FeaturedProductCard
+            product={product}
+            key={product._id}
+          ></FeaturedProductCard>
         ))}
       </div>
     </div>
@@ -20,6 +25,9 @@ export async function getServerSideProps(context) {
   const res = await fetch(
     `http://localhost:5000/products?category=${category}`
   );
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
   const data = await res.json();
   return {
     props: {

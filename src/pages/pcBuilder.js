@@ -4,12 +4,14 @@ import Image from "next/image";
 import PcBuilder from "@/components/pcBuilder/PcBuilder";
 import { useGetPcBuilderProductsQuery } from "@/redux/api/apiSlice";
 import { category } from "../../utils/category";
+import { toArray } from "lodash";
 
 export default function PCBuilder() {
   const { data, isLoading } = useGetPcBuilderProductsQuery();
   if (isLoading) {
     <p>Loading...</p>;
   }
+  const totalCost = data?.data?.map(item=>item.price).reduce((acc, item)=>acc + item,0) 
 
   return (
     <div className="md:w-2/3 mx-auto my-12">
@@ -32,9 +34,15 @@ export default function PCBuilder() {
             ></PcBuilder>
           ))}
         <div>
-          {data?.data && data.data?.length === 6 && (
-            <button>Complete Build</button>
-          )}
+          <div className="bg-gray-100 min-h-[100px] my-4 p-4 flex justify-between items-center">
+            <p className="text-2xl">Total Cost: <span className="font-semibold">${totalCost}</span></p>
+            { data?.data?.length < 6 ?
+            <button className="px-4 border-4 py-2 text-xl disabled:opacity-30" disabled>Complete Build</button>
+            :
+            <button className="px-4 border-4 py-2 text-xl hover:border-black">Complete Build</button>
+        }
+          </div>
+          
         </div>
       </div>
     </div>

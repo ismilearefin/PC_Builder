@@ -55,7 +55,7 @@ export default function DetailsPage({ product }) {
             <li>Your Rating: {individualRating}</li>
         </div>
         <div className="w-full grid justify-end">
-        <button className="border-4 px-6 font-semibold text-lg text-[#2ea4a8]" onClick={()=>handleProduct(product)}>Select</button>
+        <button className="border-4 px-6 font-semibold text-lg text-[#2ea4a8]" onClick={()=>handleProduct(product)}>Add To Builder</button>
         </div>
     </div>
   </div>;

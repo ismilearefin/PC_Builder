@@ -40,7 +40,7 @@ export default function FeaturedProductCard({ product }) {
       <Link className="border hover:border-[#32f5fc] w-1/2 text-center" href={`/products/${_id}`}>
         Details
       </Link>
-      <button className="w-1/2 border hover:border-[#32f5fc]" onClick={()=>handleProduct(product)}>Select</button>
+      <button className="w-1/2 border hover:border-[#32f5fc]" onClick={()=>handleProduct(product)}>Add To Builder</button>
       </div>
     </div>
   );
