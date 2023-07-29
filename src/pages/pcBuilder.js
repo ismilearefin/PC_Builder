@@ -9,8 +9,8 @@ import { useSelector } from "react-redux";
 
 export default function PCBuilder() {
     const selectedProduct = useSelector(state => state.product.selectedProduct)
-
-
+   
+    
     const category = [
         {
             name:'CPU',
@@ -52,7 +52,12 @@ export default function PCBuilder() {
             {
                 category.map(product =><PcBuilder key={product.name} selectedProduct={selectedProduct} product={product}></PcBuilder>)
             }
-            
+            <div>
+                {
+                   selectedProduct.length === 6 && <button>Complete Build</button> 
+                }
+                
+            </div>
         </div>
     </div>
   )

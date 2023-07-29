@@ -2,17 +2,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { addToPcBuilder } from "@/redux/features/pcBuilder/pcBuilderSlice";
+import { useRouter } from "next/router";
 
 
 export default function FeaturedProductCard({ product }) {
-    const selectedProduct = useSelector(state => state.product.selectedProduct)
+    const router = useRouter()
+    
   
   const dispatch = useDispatch()
   
   
   const handleProduct =(product)=>{
     dispatch(addToPcBuilder(product))
-    
+    alert('Successfully added product')
+    router.push('/pcBuilder')
   }
  
   const { _id,image, productName, category, price, status, averageRating } =

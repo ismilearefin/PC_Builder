@@ -10,6 +10,8 @@ export const pcBuilderSlice = createSlice({
   reducers: {
    addToPcBuilder:(state,action)=>{
     state.selectedProduct.push(action.payload)
+    // localStorage.setItem('selectedProduct', JSON.stringify(state.selectedProduct))
+    // localStorage.setItem('selectedProduct', JSON.stringify(state.selectedProduct.push(action.payload)))
    }
   },
 })
