@@ -16,7 +16,7 @@ export const authOptions = {
     
   ],
   pages:{
-    signIn: "https://pcbuilder-ruddy.vercel.app/signup"
+    signIn: "/signup"
   },
 }
 
