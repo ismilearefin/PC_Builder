@@ -4,6 +4,7 @@ import RootLayout from "@/components/Layouts/RootLayout";
 import FeaturedProduct from "@/components/FeaturedProduct/FeaturedProduct";
 import FeaturedCategory from "@/components/FeaturedCategory/FeaturedCategory";
 import Banner from "@/components/Banner/Banner";
+import InfoSection from "@/components/InfoSection.js/InfoSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,6 +15,7 @@ export default function Home({ randomProducts }) {
       <Banner></Banner>
       <FeaturedProduct randomProducts={randomProducts}></FeaturedProduct>
       <FeaturedCategory></FeaturedCategory>
+      <InfoSection></InfoSection>
     </main>
   );
 }
