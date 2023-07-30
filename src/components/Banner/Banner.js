@@ -16,6 +16,7 @@ export default function Banner() {
         </div>
         <div className="md:min-h-[300px] flex items-center border mt-2 shadow-lg">
           <Image src={new05} alt="new04" width={400} height={400}></Image>
+          1
         </div>
       </div>
     </div>
