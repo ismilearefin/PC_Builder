@@ -10,11 +10,11 @@ export default function Banner() {
       <div className="md:w-3/4">
         <CarouselComponent></CarouselComponent>
       </div>
-      <div className="">
-        <div className="md:min-h-[300px] flex items-center border shadow-lg my-2 md:my-0">
+      <div className="grid items-stretch">
+        <div className=" flex items-center border shadow-lg my-2 md:my-0">
           <Image src={new04} alt="new04" width={400} height={400}></Image>
         </div>
-        <div className="md:min-h-[300px] flex items-center border mt-2 shadow-lg">
+        <div className=" flex items-center border mt-2 shadow-lg">
           <Image src={new05} alt="new04" width={400} height={400}></Image>
         </div>
       </div>
