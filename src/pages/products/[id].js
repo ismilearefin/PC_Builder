@@ -77,7 +77,7 @@ DetailsPage.getLayout = function getLayout(page) {
 };
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:5000/products");
+  const res = await fetch("https://pc-builder-backend-g8wx.onrender.com/products");
   const data = await res.json();
 
   const paths = data.map((product) => ({
@@ -89,7 +89,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const { params } = context;
-  const res = await fetch(`http://localhost:5000/products/${params.id}`);
+  const res = await fetch(`https://pc-builder-backend-g8wx.onrender.com/products/${params.id}`);
   const product = await res.json();
 
   return {

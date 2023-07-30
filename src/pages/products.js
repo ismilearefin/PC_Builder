@@ -23,7 +23,7 @@ export default function CategoryWiseProduct({ category, data }) {
 export async function getServerSideProps(context) {
   const { category } = context.query; // Access the 'category' query parameter
   const res = await fetch(
-    `http://localhost:5000/products?category=${category}`
+    `https://pc-builder-backend-g8wx.onrender.com/products?category=${category}`
   );
   if (!res.ok) {
     throw new Error("Failed to fetch data");
