@@ -1,11 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { GrCheckboxSelected } from "react-icons/gr";
+import Loading from "../Loading/Loading";
 
 export default function PcBuilder({ product, selectedProduct }) {
-  const Items = selectedProduct.filter(
-    (Iproduct) => Iproduct.category === product.name
-  );
+
+  let Items;
+
+  if(selectedProduct.length < 0){
+    return <Loading></Loading>
+  }else{
+    Items = selectedProduct.filter(
+      (Iproduct) => Iproduct.category === product.name
+    );
+  }
+
+  
 
   return (
     <div className="border min-h-[150px] px-2 md:px-0">

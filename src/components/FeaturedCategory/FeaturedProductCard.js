@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { usePostProductInPcBuilderMutation } from "@/redux/api/apiSlice";
+import Rating from "../Rating/Rating";
+import AlartMessage from "../Alart/AlartMessage";
 
 
 export default function FeaturedProductCard({ product }) {
@@ -33,7 +35,7 @@ export default function FeaturedProductCard({ product }) {
           <p className="shadow-sm bg-gray-100  font-semibold">{category}</p>
           <p>${price}</p>
           <p>{status }</p>
-          <p>Rating: {averageRating}</p>
+          <Rating value={averageRating}></Rating> 
         </div>
       </div>
       <div className="flex justify-between p-2 gap-2">

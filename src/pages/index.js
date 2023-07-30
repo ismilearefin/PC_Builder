@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home({ randomProducts }) {
   
   return (
-    <main className="">
+    <main>
       <FeaturedProduct randomProducts={randomProducts}></FeaturedProduct>
       <FeaturedCategory></FeaturedCategory>
     </main>

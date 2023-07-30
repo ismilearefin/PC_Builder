@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Rating from "../Rating/Rating";
 
 export default function ProductCard({ product }) {
   // console.log(product)
@@ -23,7 +24,7 @@ export default function ProductCard({ product }) {
           <p className="shadow-sm bg-gray-100  font-semibold">{category}</p>
           <p>${price}</p>
           <p>{status }</p>
-          <p>Rating: {averageRating}</p>
+          <Rating value={averageRating}></Rating>
         </div>
       </div>
       </Link>
