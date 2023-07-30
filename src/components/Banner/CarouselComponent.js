@@ -1,8 +1,8 @@
 import React from 'react';
 import { Carousel } from 'antd';
-import newOne from '../../../public/new01.PNG';
-import newTwo from '../../../public/new02.PNG';
-import newThree from '../../../public/new03.PNG';
+import newOne from '../../../public/images/new01.PNG';
+import newTwo from '../../../public/images/new02.PNG';
+import newThree from '../../../public/images/new03.PNG';
 import Image from 'next/image';
 // const contentStyle = {
 //   margin: 0,

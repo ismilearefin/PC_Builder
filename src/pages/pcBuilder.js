@@ -1,12 +1,11 @@
 import RootLayout from "@/components/Layouts/RootLayout";
-import logo from "../../public/techworld-logo.png";
+import logo from "../../public/images/techworld-logo.png";
 import Image from "next/image";
 import { BsCpu, BsMotherboard, BsFillDiagram3Fill } from "react-icons/bs";
 import { GiPowerGenerator } from "react-icons/gi";
 import { MdStorage, MdMonitor } from "react-icons/md";
 import PcBuilder from "@/components/pcBuilder/PcBuilder";
 import { useGetPcBuilderProductsQuery } from "@/redux/api/apiSlice";
-// import { category } from "../../utils/category";
 import dynamic from "next/dynamic";
 import Loading from "@/components/Loading/Loading";
 
@@ -68,9 +67,7 @@ export default function PCBuilder() {
         </p>
       </div>
       <div className="min-h-screen">
-        {/* <DynamicComponent></DynamicComponent> */}
         {category?.map((product) => (
-          // <DynamicComponent key={product.name} selectedProduct={data.data} product={product}></DynamicComponent>
           <PcBuilder
             key={product.name}
             selectedProduct={data.data}

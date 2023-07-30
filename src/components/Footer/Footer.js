@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "../../../public/techworld-logo.png";
+import logo from "../../../public/images/techworld-logo.png";
 import {
   BsFacebook,
   BsInstagram,
