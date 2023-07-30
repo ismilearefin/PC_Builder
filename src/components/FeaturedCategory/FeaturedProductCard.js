@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { usePostProductInPcBuilderMutation } from "@/redux/api/apiSlice";
 import Rating from "../Rating/Rating";
-import AlartMessage from "../Alart/AlartMessage";
+
 
 
 export default function FeaturedProductCard({ product }) {
